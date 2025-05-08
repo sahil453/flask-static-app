@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-static-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: flask-static-app    # 👈 MUST match with service selector
+  template:
+    metadata:
+      labels:
+        app: flask-static-app  # 👈 SAME here
+    spec:
+      containers:
+        - name: flask-container
+          image: flask-static-app:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 5000

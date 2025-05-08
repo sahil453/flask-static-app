@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.log
+.env
+venv/
+*.sqlite3
+*.db
+.DS_Store
+*.swp
+.idea/
+.vscode/
+*.iml
+*.egg-info/
+docker-image.tar
